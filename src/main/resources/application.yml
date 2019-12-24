@@ -1,7 +1,18 @@
 spring:
   main:
     banner-mode: off
-
+    web-application-type: reactive
+---
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+      write-date-timestamps-as-nanoseconds: false
+      write-durations-as-timestamps: false
+      write-dates-with-zone-id: false
+      write-enums-using-to-string: true
+      fail-on-empty-beans: false
+---
 management:
   endpoints:
     enabled-by-default: true

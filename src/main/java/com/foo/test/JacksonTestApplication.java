@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class JacksonTestApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(JacksonTestApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(JacksonTestApplication.class, args);
+  }
 
 }

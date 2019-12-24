@@ -35,13 +35,14 @@ public class JacksonEndpoint {
     final Map<String, Object> result = new TreeMap<>();
     result.put("serialization", Stream.of(SerializationFeature.values()).collect(Collectors.toMap(SerializationFeature::name, serializationConfig::isEnabled)));
     result.put("deserialization", Stream.of(DeserializationFeature.values()).collect(Collectors.toMap(DeserializationFeature::name, deserializationConfig::isEnabled)));
-    result.put("test", Map.of(
+    Map<String, Object> dates = Map.of(
         "java.time.Instant", Instant.now(),
         "java.time.ZonedDateTime", ZonedDateTime.now(),
         "java.time.LocalDateTime", LocalDateTime.now(),
         "java.time.Duration", Duration.ofMinutes(5),
         "java.util.date.Date", new Date()
-        ));
+        );
+    result.put("dates", new TreeMap<>(dates));
     return result;
   }
 }
