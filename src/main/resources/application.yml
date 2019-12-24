@@ -1,0 +1,10 @@
+spring:
+  main:
+    banner-mode: off
+
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: '*'
